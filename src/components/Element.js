@@ -1,44 +1,15 @@
 import React from "react";
 import InputEmail from "./Elements/inputEmail";
-import InputNumero from "./Elements/InputNumero";
-import InputPassword from "./Elements/inputPassword";
-import Select from "./Elements/select";
+import FormElement from '../formElement.json'
 
-const Element = ({ id: { type, name, label, id, ordem, options, value, text } }) => {
+function Element({ type, name, label, id, ordem, options, value, text }) {
   switch (type) {
     case "email":
-      return (
-        <InputEmail
-          name={name}
-          label={label}
-          id={id}
-          ordem={ordem}
-        />
-      );
-
     case "password":
-      return (
-        <InputPassword
-          name={name}
-          label={label}
-          id={id}
-          ordem={ordem}
-        />
-      );
-
     case "number":
-      return (
-        <InputNumero
-          name={name}
-          label={label}
-          id={id}
-          ordem={ordem}
-        />
-      );
-
     case "select":
       return (
-        <Select
+        <InputEmail
           name={name}
           label={label}
           id={id}
@@ -53,6 +24,6 @@ const Element = ({ id: { type, name, label, id, ordem, options, value, text } })
       break;
   }
   return null;
-};
+}
 
 export default Element;

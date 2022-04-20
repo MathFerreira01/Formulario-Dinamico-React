@@ -1,14 +1,8 @@
 import React from "react";
 
-const InputEmail = ({ name, label, id, ordem }) => {
-
+const InputEmail = ({ name, label, id ,ordem, options, value, text, type }) => {
   return (
-    <>
-      <div>
-        <label>{label}</label>
-        <input name="email" type="email" id="1"/>
-      </div>
-    </>
+    <div></div>
   );
 };
 
